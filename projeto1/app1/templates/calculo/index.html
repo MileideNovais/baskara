@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'calculo/css/style.css' %}">
+    <title>Calculo Equação de Segundo Grau</title>
+</head>
+<body>
+    <div class="h1">
+        <h1>Digite os coeficientes da equação</h1>
+    </div>
+   
+    <div class="container">
+        
+        <div>
+            <form method="post" action="." class="form-box">
+                {% csrf_token %}
+                
+                {{ form }}
+                <input id="button"type="submit" value="calcular"/>
+                
+                {% if resultado %}
+                <p>Resultado: {{ resultado }}</p>
+                {% endif %}
+                
+            </form>
+        </div>
+    </div>
+   
+</body>
+</html>
