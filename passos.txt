@@ -1,0 +1,88 @@
+**************************************************
+verificar versão python (python --version)
+
+criar ambiente virtual (python3 -m venv ./env)
+
+ativar o ambiente virtual (source ./env/bin/activate)
+
+instalar o django (pip install django)
+
+verificar versão do django instalada (python -m django --version)
+
+guardar suas dependências (pip freeze > requeriments.txt)
+
+***********************************************************
+
+criar o primeiro projeto (django-admin startproject projeto1)
+
+fazer as considerações do settings. py( arquivos estáticos e templates)
+
+mostrar o que tem na pasta (ls)
+
+entrar na pasta (cd projeto1)
+
+subir a aplicação (python manage.py runserver)
+
+crtl +  click no endereço
+
+criar primeiro aplicativo (python manage.py startapp app1) e registrar app1 nos settings
+
+configuramos urls(projeto1 e app1)(criar urls.py no app1)
+ 
+ criar forms.py no app1 
+
+ colar pOSTA STATIC COM BOOTSTRAP
+
+criar pasta templates no app1
+
+terminal digitar (python manage.py migrate)
+**************************************************************************************************************
+
+criamos uma forms e models
+
+criar migrações do molelo User (python manage.py makemigrations)
+
+apliquei as migrações (python manage.py migrate)
+
+registrar User no admin.
+
+
+criar o super usuário (python manage.py createsuperuser)
+
+subir a aplicação (python manage.py runserver)
+
+configurar urls da app1
+
+configurar views 
+
+criar arquivos html da pasta template.
+
+python shell (python manage.py shell) verificação de criação de tabelas
+
+registrar models no admin.py (app1)
+
+erro na inserção de dados:
+    mudar o campo no models
+    criar migrações do model User  (python manage.py makemigartions)
+    apliquei as migrações (python manage.py migrate)
+
+
+testar
+
+
+pip install coverage
+
+criar arquivo .coveragerc
+
+
+
+coverage run manage.py test
+
+coverage report (verificar o que foi testado)
+
+coverage html
+
+cd htmlcov/
+
+
+python -m http.server
